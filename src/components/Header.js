@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './styles.css'
 import { Link } from 'react-router-dom'
+import { cartPage } from './Context'
 function Header() {
+  const {cart}=useContext(cartPage)
   return (
     <div>
       <span className="header">Context Api Tutorial</span>
@@ -10,7 +12,7 @@ function Header() {
             <Link to='/'>Home Page</Link>
         </li>
         <li>
-        <Link to='/cart'>Cart</Link>
+            <Link to='/cart'>Cart ({cart.length})</Link>
         </li>
       </ul>
     </div>

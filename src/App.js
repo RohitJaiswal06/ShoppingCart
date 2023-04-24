@@ -5,6 +5,8 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import Cart from './Components/Cart';
 function App() {
+  // const [cart, setCart] = useState([]);
+
   return (
     <BrowserRouter>
       <Header />
